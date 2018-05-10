@@ -11,6 +11,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "lint": "standard --verbose --fix"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "globals": [ "fetch", "it" ]
+  }  
 }

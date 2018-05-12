@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import BooksStore from './stores/BooksStore'
+
+new BooksStore() // eslint-disable-line no-new
 
 ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()

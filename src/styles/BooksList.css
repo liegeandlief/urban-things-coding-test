@@ -1,0 +1,31 @@
+.BooksList__heading {
+    color: rgb(255, 64, 129);
+}
+
+.BooksList__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.BooksList__item {
+    padding: 10px 0 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.BooksList__itemTitle {
+    margin-top: 0;
+    color: navy;
+}
+
+@media all and (min-width: 550px) {
+    .BooksList__item {
+        padding: 10px 0;
+    }
+
+    .BooksList__itemDetailsButton {
+        float: right;
+        margin-top: -55px;
+    }
+}

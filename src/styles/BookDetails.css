@@ -1,0 +1,11 @@
+.BookDetails__image {
+    display: block;
+    margin: 10px auto 30px;
+}
+
+@media all and (min-width: 550px) {
+    .BookDetails__image {
+        float: right;
+        margin: 0 0 20px 20px;
+    }
+}

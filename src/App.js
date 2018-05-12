@@ -1,19 +1,43 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import './styles/App.css'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import AppBar from 'material-ui/AppBar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import BooksList from './BooksList'
+import NavTabs from './NavTabs'
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <MuiThemeProvider>
+          <div className='App'>
+
+            <div className='App__header'>
+              <AppBar title='Library books' showMenuIconButton={false} />
+            </div>
+
+            <main className='App__main'>
+              <Switch>
+                <Route path='/' exact strict render={() => {
+                  return <BooksList title='All books' />
+                }} />
+                <Route path='/my-wish-list' exact strict render={() => {
+                  return <BooksList title='My wish list' wishListBooksOnly />
+                }} />
+                <Route render={() => {
+                  return <p>Page not found.</p>
+                }} />
+              </Switch>
+            </main>
+
+            <nav className='App__nav'>
+              <NavTabs />
+            </nav>
+
+          </div>
+        </MuiThemeProvider>
+      </Router>
     )
   }
 }

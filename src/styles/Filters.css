@@ -1,0 +1,39 @@
+.Filters .accordion__item {
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+.Filters .accordion__title {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.Filters .accordion__title:after {
+    content: '\25B5';
+    float: right;
+}
+
+.Filters .accordion__title[aria-selected="false"]:after {
+    content: '\25BD';
+    float: right;
+}
+
+.Filters .accordion__body {
+    padding: 5px 15px;
+    display: block;
+}
+
+.Filters .accordion__body--hidden {
+    display: none;
+}
+
+.Filters__controls {
+    overflow: hidden;
+}
+
+.Filters__control {
+    margin-right: 20px;
+    float: left;
+}

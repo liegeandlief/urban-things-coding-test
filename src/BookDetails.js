@@ -63,7 +63,7 @@ class BookDetails extends Component {
           repositionOnUpdate={false}
           style={{ padding: '0px 0px 0px 0px' }}
         >
-          <img src={book.imageUrl} alt={book.title + ' cover'} className='BookDetails__image' />
+          <img src={book.imageUrl} alt={book.title + ' cover'} className='BookDetails__image' onError={e => { e.target.style.display = 'none' }} />
           <p className='BookDetails__author'><strong>Author:</strong> {book.author}</p>
           {typeof book.volume !== 'undefined' && <p className='BookDetails__volume'><strong>Volume:</strong> {book.volume}</p>}
           <p className='BooksList__category'><strong>Category:</strong> {book.category}</p>
